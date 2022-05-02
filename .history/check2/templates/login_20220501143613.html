@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>To-Do Log-in</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&family=PT+Serif&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body class="container">
+    <header class="logo">
+      {% block header %}
+        <a href="//insert link for landing page here later" target="_blank">
+            <img class="logo" src="static/images/logo.png"S alt="To-Do Logo">
+        </a>
+      {% endblock %}
+    </header>
+<div id="id01" class="modal" style="z-index: 2; align-self: center;">
+          <form class="modal-content" action="/action_page.php">
+            <div class="container">
+              <h2>Sign Up</h2>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <label for="uname" class="input-label" id="ulabel">Username:</label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="email" class="input-label">Email:</label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="psw" class="input-label">Password:</label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <label for="psw-repeat" class="input-label">Repeat Password:</label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+
+              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+              <div class="clearfix">
+                <button type="submit" class="signup" href=<--"{{url_for('auth.signup')}}"-->>Sign Up</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    <form action="action_page.php" method="post">
+       
+          
+        <div class="container" style="z-index: 1;">
+          <label for="uname" class="input-label">Username:</label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw" class="input-label">Password:</label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+          <button type="submit" href="{{url_for('auth.Login')}}" >Login</button>
+          <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+     </form>
+    
+    <script type="text/python" src="app.py"></script>
+</body>
+</html>
+

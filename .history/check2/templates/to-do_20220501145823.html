@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>To-Do App</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&family=PT+Serif&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300&family=Cormorant:wght@400;500&family=PT+Serif&display=swap" rel="stylesheet">
+<script defer src="{{url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body class="container">
+    <header class="logo">
+        <a href="//insert link for landing page here later" target="_blank">
+            <img class="logo" src="static/images/logo.png" alt="To-Do Logo">
+        </a>
+    </header>
+    <div class="main">
+        <form >
+            <input type="text" placeholder="NewTask...">
+            <button type="submit"> <i class="fas fa-plus-square"> </i></button>
+        </form>
+
+        <div class="todoList">
+            <ul>
+
+            </ul>
+            <a class="clearAll" id="clearAll">Clear All</a>
+        </div>
+
+    </div>
+</body>
+</html>
