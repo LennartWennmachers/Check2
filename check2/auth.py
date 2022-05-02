@@ -1,5 +1,5 @@
 from check2 import app, db, views, auth
-from tkinter.tix import Form
+
 from flask import Blueprint, render_template, flash, session, url_for, redirect, request
 from flask_login import login_user, current_user, login_required, logout_user, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
